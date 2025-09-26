@@ -1596,3 +1596,194 @@ html {
         font-size: 13px;
     }
 }
+
+@media (min-width: 2560px) {
+    .nav-menu {
+        top: 120px;
+        font-size: 22px;
+        gap: 30px;
+        padding: 60px 100px;
+    }
+
+    .nav-menu a {
+        padding: 30px 60px;
+        font-size: 26px;
+        border-radius: 25px;
+    }
+
+    .logo-text {
+        font-size: 64px;
+    }
+
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .slider-container {
+        width: 85vw;
+        height: calc(42.5vw + 250px);
+    }
+
+    .slider-stage {
+        height: 42.5vw;
+    }
+
+    .text-overlay {
+        height: 220px;
+        padding: 0 80px;
+        bottom: 150px;
+    }
+
+    .slide-title {
+        font-size: 64px;
+        margin-bottom: 20px;
+    }
+
+    .slide-description {
+        font-size: 28px;
+        line-height: 1.6;
+    }
+
+    .nav-arrow {
+        width: 100px;
+        height: 100px;
+        top: min(calc(21.25vw), 800px);
+    }
+
+    .nav-arrow.prev {
+        left: 50px;
+    }
+
+    .nav-arrow.next {
+        right: 50px;
+    }
+
+    .control-btn {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+    }
+
+    .controls {
+        top: 40px;
+        right: 40px;
+        gap: 25px;
+    }
+
+    .dots {
+        top: 40px;
+        gap: 25px;
+    }
+
+    .dot {
+        width: 25px;
+        height: 25px;
+    }
+
+    .thumbnail {
+        width: 200px;
+        height: 133px;
+    }
+
+    .thumbnails-container {
+        gap: 25px;
+        bottom: 50px;
+    }
+
+    .section {
+        padding: 200px 100px;
+    }
+
+    .section-title {
+        font-size: 80px;
+    }
+
+    .section-subtitle {
+        font-size: 32px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+    }
+
+    .services-tabs {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 40px;
+    }
+
+    .services-content {
+        padding: 100px 80px;
+    }
+
+    .service-content h2 {
+        font-size: 64px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 150px;
+    }
+
+    .timeline-item {
+        padding-left: 150px;
+        margin-bottom: 100px;
+    }
+
+    .timeline-line {
+        left: 60px;
+    }
+
+    .timeline-dot {
+        left: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .stats-futuristic {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+        margin-top: 150px;
+    }
+
+    .stat-futuristic {
+        padding: 80px 60px;
+    }
+
+    .stat-futuristic h4 {
+        font-size: 64px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+    }
+
+    .contact-form {
+        padding: 100px 80px;
+        font-size: 26px;
+    }
+
+    .contact-info {
+        padding: 100px 60px;
+        font-size: 24px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .footer-copyright,
+    .footer-credits {
+        font-size: 20px;
+    }
+}
