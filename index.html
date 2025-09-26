@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtechX 4.0 - DPI Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo-container">
+               <img src="images/Logo_ProtechX.png" alt="ProtechX Logo" class="logo-img">
+
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF6B6B"/>
+                            <stop offset="100%" style="stop-color:#7FFFD4"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" opacity="0.1"/>
+                    <path d="M20 60 L35 40 L50 55 L65 35 L80 50" stroke="url(#logoGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="35" cy="40" r="3" fill="url(#logoGradient)"/>
+                    <circle cx="50" cy="55" r="3" fill="url(#logoGradient)"/>
+                    <circle cx="65" cy="35" r="3" fill="url(#logoGradient)"/>
+                    <rect x="25" y="65" width="50" height="15" rx="7" fill="url(#logoGradient)" opacity="0.3"/>
+                </svg>
+                <span class="logo-text">ProtechX 4.0</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Prodotti</a></li>
+                <li><a href="#about" class="nav-link">Chi Siamo</a></li>
+                <li><a href="#contact" class="nav-link">Contatti</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="slider-container">
+            <div class="progress-ring">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div class="slider-stage" id="sliderStage"></div>
+            <div class="text-overlay" id="textOverlay">
+                <h2 class="slide-title" id="slideTitle">Cuffie Antirumore</h2>
+                <p class="slide-description" id="slideDescription">Protezione acustica avanzata per ambienti di lavoro industriali, con comfort ergonomico e certificazioni europee di sicurezza.</p>
+            </div>
+            
+            <button class="nav-arrow prev" id="prevArrow" aria-label="Previous"></button>
+            <button class="nav-arrow next" id="nextArrow" aria-label="Next"></button>
+            
+            <div class="controls">
+                <button class="control-btn play-pause-btn" id="playPauseBtn" title="Play/Pause">
+                    <span class="play-icon"></span>
+                    <span class="pause-icon"></span>
+                </button>
+            </div>
+            
+            <div class="dots" id="dots"></div>
+            <div class="thumbnails-container" id="thumbnails"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">I Nostri DPI</h2>
+                <p class="section-subtitle">Soluzioni certificate per la sicurezza personale: cuffie antirumore, dispositivi di protezione uditiva e accessori ergonomici.</p>
+            </div>
+            
+            <div class="services-container">
+                <div class="services-tabs">
+                    <div class="service-tab active" data-service="earprotection">
+                        <span class="service-tab-icon">🎧</span>
+                        <h3>Cuffie Antirumore</h3>
+                        <p>Protezione uditiva avanzata</p>
+                    </div>
+                    
+                    <div class="service-tab" data-service="helmets">
+                        <span class="service-tab-icon">⛑️</span>
+                        <h3>Caschi Protettivi</h3>
+                        <p>Massima sicurezza sul lavoro</p>
+                    </div>
+                    
+                    <div class="service-tab" data-service="glasses">
+                        <span class="service-tab-icon">🕶️</span>
+                        <h3>Occhiali di Sicurezza</h3>
+                        <p>Protezione da polveri e urti</p>
+                    </div>
+                </div>
+                
+                <div class="services-content">
+                    <div class="service-content active" id="earprotection">
+                        <div class="service-content-icon">🎧</div>
+                        <h2>Cuffie Antirumore Professionali</h2>
+                        <p>Le nostre cuffie offrono isolamento acustico fino a 35 dB, riducendo i rischi di perdita uditiva dovuti a esposizioni prolungate in ambienti industriali rumorosi.</p>
+                        <ul class="service-features">
+                            <li>Certificazione EN 352-1</li>
+                            <li>Comfort prolungato con imbottitura memory foam</li>
+                            <li>Versioni pieghevoli e regolabili</li>
+                            <li>Modelli con integrazione Bluetooth per comunicazioni sicure</li>
+                            <li>Resistenza a urti e condizioni estreme</li>
+                            <div class="nav-node" onclick="window.location.href='Cuffie.html';">Visualizza in 3D</div>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-content" id="helmets">
+                        <div class="service-content-icon">⛑️</div>
+                        <h2>Caschi Protettivi Industriali</h2>
+                        <p>Caschi leggeri, resistenti agli urti e alle alte temperature, adatti a edilizia, manifattura e lavori in quota.</p>
+                        <ul class="service-features">
+                            <li>Materiale ABS ad alta resistenza</li>
+                            <li>Ventilazione regolabile</li>
+                            <li>Sistemi di sospensione a 6 punti</li>
+                            <li>Visiere integrate disponibili</li>
+                            <li>Certificazione EN 397</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-content" id="glasses">
+                        <div class="service-content-icon">🕶️</div>
+                        <h2>Occhiali di Sicurezza</h2>
+                        <p>Protezione completa degli occhi da schegge, polveri sottili e raggi UV, senza compromettere la visibilità.</p>
+                        <ul class="service-features">
+                            <li>Lenti anti-appannamento e antigraffio</li>
+                            <li>Protezione UV400</li>
+                            <li>Disponibili in versione graduata</li>
+                            <li>Montature leggere ed ergonomiche</li>
+                            <li>Certificazione EN 166</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">La Nostra Missione</h2>
+                <p class="section-subtitle">Proteggere la salute dei lavoratori attraverso soluzioni DPI innovative, sicure e confortevoli.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-title">Fondazione</div>
+                        <div class="timeline-description">Inizio con la produzione di cuffie antirumore per il settore manifatturiero.</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-title">Espansione Europea</div>
+                        <div class="timeline-description">Certificazioni CE e distribuzione in oltre 12 paesi.</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-title">Nuove Tecnologie</div>
+                        <div class="timeline-description">Introduzione di cuffie DPI con riduzione attiva del rumore e connettività wireless.</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">Innovazione AI</div>
+                        <div class="timeline-description">Integrazione di sistemi intelligenti per monitorare l’esposizione sonora e prevenire rischi uditivi.</div>
+                    </div>
+                </div>
+                
+                <div class="about-tech">
+                    <div class="tech-card">
+                        <div class="tech-icon">🤖</div>
+                        <div class="tech-title">Monitoraggio Intelligente</div>
+                        <div class="tech-description">Sensori integrati per analisi in tempo reale del livello di rumore e segnalazioni di sicurezza.</div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">🔋</div>
+                        <div class="tech-title">Batteria a Lunga Durata</div>
+                        <div class="tech-description">Autonomia fino a 40 ore per modelli attivi con connettività Bluetooth.</div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">🛡️</div>
+                        <div class="tech-title">Certificazioni Internazionali</div>
+                        <div class="tech-description">Conformità agli standard EN, ANSI e OSHA per garantire massima sicurezza e affidabilità.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-futuristic">
+                <div class="stat-futuristic">
+                    <h4>15+</h4>
+                    <p>Anni di esperienza</p>
+                </div>
+                <div class="stat-futuristic">
+                    <h4>20</h4>
+                    <p>Paesi serviti</p>
+                </div>
+                <div class="stat-futuristic">
+                    <h4>1M+</h4>
+                    <p>Operatori protetti</p>
+                </div>
+                <div class="stat-futuristic">
+                    <h4>99.9%</h4>
+                    <p>Soddisfazione Clienti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Contattaci</h2>
+                <p class="section-subtitle">Vuoi richiedere un preventivo o maggiori informazioni sui nostri DPI? Scrivici subito.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Oggetto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" placeholder="Descrivi le tue esigenze in termini di DPI..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Invia</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Sede Operativa</h4>
+                            <p>Milano, Italia<br>20100</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Telefono</h4>
+                            <p>+39 02 1234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@protechx-dpi.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h4>Orari</h4>
+                            <p>Lunedì - Venerdì: 9:00 - 18:00<br>Sabato su appuntamento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/Logo_ProtechX.png" alt="ProtechX Logo" class="logo-img">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B6B"/>
+                                    <stop offset="100%" style="stop-color:#7FFFD4"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="50" r="45" fill="url(#footerLogoGradient)" opacity="0.1"/>
+                            <path d="M20 60 L35 40 L50 55 L65 35 L80 50" stroke="url(#footerLogoGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="35" cy="40" r="3" fill="url(#footerLogoGradient)"/>
+                            <circle cx="50" cy="55" r="3" fill="url(#footerLogoGradient)"/>
+                            <circle cx="65" cy="35" r="3" fill="url(#footerLogoGradient)"/>
+                            <rect x="25" y="65" width="50" height="15" rx="7" fill="url(#footerLogoGradient)" opacity="0.3"/>
+                        </svg>
+                        <span class="footer-logo-text">ProtechX DPI</span>
+                    </div>
+                    <p class="footer-description">Soluzioni avanzate per la protezione individuale. Dalle cuffie antirumore ai caschi di sicurezza, garantiamo innovazione e comfort.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Prodotti</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Cuffie Antirumore</a>
+                        <a href="#" class="footer-link">Caschi Protettivi</a>
+                        <a href="#" class="footer-link">Occhiali di Sicurezza</a>
+                        <a href="#" class="footer-link">Guanti Tecnici</a>
+                        <a href="#" class="footer-link">Accessori DPI</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Azienda</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Chi Siamo</a>
+                        <a href="#" class="footer-link">Missione</a>
+                        <a href="#" class="footer-link">Lavora con Noi</a>
+                        <a href="#" class="footer-link">Press</a>
+                        <a href="#" class="footer-link">Blog</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Supporto</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Centro Assistenza</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Termini e Condizioni</a>
+                        <a href="#" class="footer-link">Spedizioni</a>
+                        <a href="#" class="footer-link">Resi e Garanzia</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2026 ProtechX DPI. Tutti i diritti riservati.
+                </div>
+                <div class="footer-credits">
+                    | Realizzato dal Team ProtechX
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Javascript.js"></script>
+</body>
+</html>
+

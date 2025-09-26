@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport">
+    <style>
+
+                  .hotspot {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: blue;
+                    box-sizing: border-box;
+                    pointer-events: none;
+                  }
+                  .HotspotAnnotation {
+                    background-color: #ffffffac;
+                    position: absolute;
+                    transform: translate(10px, 10px);
+                    border-radius: 10px;
+                    padding: 10px;
+                  }
+
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #ffffff;
+        overflow: hidden;  
+        position: relative;
+      }
+      model-viewer {
+        width: 100%;
+        height: 100%;
+      }
+    
+      .button-container {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .nav-button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 150px;
+      }
+      .nav-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+
+<model-viewer src="Cuffie.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate camera-orbit="47.92deg 73.72deg 49.59m" field-of-view="30deg">
+    <button class="Hotspot" slot="hotspot-1" data-position="-7.9122314692557945m 0.6210289682928085m 1.5747045756056814m" data-normal="-0.9781715905908459m -0.20779873619406294m -0.0001568347060570963m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Potenziometro per la Regolazione del Volume</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="-3.7403088710330152m 1.2607029455262042m 2.517320421802938m" data-normal="0.9781496161812537m 0.20790220862026554m 0.000003909190934792139m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Sensore del Battito Cardiaco</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-3.730119513805233m -1.93571721698975m 1.3045364327472302m" data-normal="0.2281325021012822m -0.9696850007649339m -0.08755889889964756m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Microfono per la cancellazione attiva del rumore</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="3.86411719536442m -1.962151286176077m 1.9687669803748173m" data-normal="-0.2077114671429681m -0.977278226118094m 0.042228132480461006m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Sensore di CO2 MH-Z19</div>
+    </button><button class="Hotspot" slot="hotspot-7" data-position="4.449074225722891m 1.4280194330262401m -1.579471837636647m" data-normal="5.551115123125784e-17m 0m -1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Sensore di Temperatura DHT22</div>
+    </button><button class="Hotspot" slot="hotspot-8" data-position="4.440899047126913m 4.556715984530526m 1.7798502536555045m" data-normal="-0.9781476364461668m 0.20791152276498764m 0.0000040400140243757035m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Unità di Misurazione Inerziale</div>
+      </button>
+        <div class="HotspotAnnotation">Visualizzaione Dettagliata</div>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+</model-viewer>
+
+
+
+    <div class="button-container">
+      <button class="nav-button" onclick="window.location.href='index.html';">Torna alla Home</button>
+      <button class="nav-button" onclick="window.location.href='index.html#services';">Torna al Catalogo</button>
+      <button class="nav-button" onclick="window.location.href='Cuffie.html';">Rimuovi i Dettagli</button>
+    </div>
+
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+    <script>
+      const annotationClicked = (a) => {
+        let ds = a.parentNode.dataset;
+        mv.cameraTarget = ds.target;
+        mv.cameraOrbit = ds.orbit;
+
+        if (ds.fov !== undefined) mv.fieldOfView = ds.fov;
+      };
+    </script>
+  </body>
+</html>
