@@ -1,14 +1,3 @@
-// Sleeky Pro - Premium Photography Template Scripts
-
-/*
-
-TemplateMo 598 Sleeky Pro
-
-https://templatemo.com/tm-598-sleeky-pro
-
-*/
-
-
 class VerticalCubeSlider {
     constructor() {
         this.currentIndex = 0;
