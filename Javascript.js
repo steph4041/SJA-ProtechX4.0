@@ -13,7 +13,7 @@ class VerticalCubeSlider {
     constructor() {
         this.currentIndex = 0;
         this.isAnimating = false;
-        this.sliceCount = 10;
+        this.sliceCount = 8;
         this.autoPlayInterval = null;
         this.isPlaying = true;
         this.currentFace = 0;
@@ -376,12 +376,8 @@ document.addEventListener('DOMContentLoaded', () => {
     serviceTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const targetService = tab.getAttribute('data-service');
-            
-            // Remove active class from all tabs and contents
             serviceTabs.forEach(t => t.classList.remove('active'));
             serviceContents.forEach(c => c.classList.remove('active'));
-            
-            // Add active class to clicked tab
             tab.classList.add('active');
             
             // Show corresponding content
